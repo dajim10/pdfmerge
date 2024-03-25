@@ -80,57 +80,59 @@ const LoginForm = () => {
     };
 
     return (
-        <div className="container" id="loginForm">
+        <div className="container mt-3 d-flex flex-column" >
 
 
-            {/* <div className="col-lg-6 col-md mx-auto"> */}
+            <div className="row">
+                <div className="col-lg-6 col-md mx-auto">
 
-            <div className="card">
-                <div className="card-header text-center ">Please Login</div>
+                    <div className="card">
+                        <div className="card-header text-center ">Please Login</div>
 
-                <div className="card-body">
-                    <form onSubmit={handleLogin}>
-                        <div className="form-group">
-                            <label htmlFor="username">Username:</label>
-                            <input
-                                type="text"
-                                className="form-control"
-                                id="username"
-                                name="username"
-                                value={username}
-                                onChange={(e) => setUsername(e.target.value)}
-                                required
-                                placeholder='e-passport'
-                                autoFocus
-                            />
+                        <div className="card-body">
+                            <form onSubmit={handleLogin}>
+                                <div className="form-group">
+                                    <label htmlFor="username">Username:</label>
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        id="username"
+                                        name="username"
+                                        value={username}
+                                        onChange={(e) => setUsername(e.target.value)}
+                                        required
+                                        placeholder='e-passport'
+                                        autoFocus
+                                    />
+                                </div>
+                                <div className='form-group'>
+                                    <label htmlFor="password">Password</label>
+                                    <div className="position-relative">
+                                        <input
+                                            type={showPassword ? 'text' : 'password'}
+                                            className="form-control"
+                                            id="password"
+                                            placeholder="password"
+                                            value={password}
+                                            onChange={(e) => setPassword(e.target.value)}
+                                        />
+                                        <span
+                                            className="field-icon"
+                                            onClick={handleTogglePassword}
+                                        >
+                                            <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
+                                        </span>
+                                    </div>
+                                </div>
+                                <button type="submit" className="btn btn-primary mt-2 form-control">
+                                    เข้าสู่ระบบ
+                                </button>
+                            </form>
                         </div>
-                        <div className='form-group'>
-                            <label htmlFor="password">Password</label>
-                            <div className="position-relative">
-                                <input
-                                    type={showPassword ? 'text' : 'password'}
-                                    className="form-control"
-                                    id="password"
-                                    placeholder="password"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                />
-                                <span
-                                    className="field-icon"
-                                    onClick={handleTogglePassword}
-                                >
-                                    <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
-                                </span>
-                            </div>
-                        </div>
-                        <button type="submit" className="btn btn-primary mt-2 form-control">
-                            เข้าสู่ระบบ
-                        </button>
-                    </form>
+                    </div>
+
                 </div>
             </div>
-
-            {/* </div> */}
         </div>
 
     );

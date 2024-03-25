@@ -39,6 +39,27 @@
   margin: 0;
 }
 
+.position-relative {
+  position: relative;
+}
+
+.field-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* Styling for when the password is hidden */
+.field-icon.eye-slash {
+  color: #ccc; /* Adjust color as needed */
+}
+
+/* Styling for when the password is shown */
+.field-icon.eye {
+  color: #333; /* Adjust color as needed */
+}
 
 
   
