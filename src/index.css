@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans Thai', sans-serif;
+  /* background-image: url('./assets/3dbg.png'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 500px;
+}
+
+#loginForm {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+
+
+.drop-area {
+  border: 2px dashed #aaaaaa;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.drop-area p {
+  margin: 0;
+}
+
+
+
+  
